@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_screenutil: ^5.9.3
   google_fonts: ^6.2.1
+  dartz: ^0.10.1
+  dio: ^5.7.0
 
 
 dev_dependencies:

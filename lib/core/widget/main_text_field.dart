@@ -2,19 +2,24 @@ import 'package:flutter/material.dart';
 typedef Validator = String? Function(String?);
 
 class MainTextField extends StatelessWidget {
-  String label;
+  String? label;
+  String? hint;
   TextInputType keyboardType ;
-  bool isPassword ;
+  bool secureText ;
   TextEditingController controller ;
-  Validator myValidator ;
+  Validator? myValidator ;
+  IconButton? suffixIcon;
+  var formKey = GlobalKey<FormState>();
 
   MainTextField(
       {super.key,
-        required this.label ,
+
         this.keyboardType = TextInputType.text ,
-        this.isPassword=false ,
+        this.secureText=false ,
         required this.controller,
-        required this.myValidator ,
+         required this.myValidator ,
+        required this.hint,
+        this.suffixIcon,
 
       }) ;
 
@@ -23,30 +28,58 @@ class MainTextField extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.all(8),
       child: TextFormField(
+
         decoration: InputDecoration(
-          label: Text(label),
+          suffixIcon:suffixIcon,
+          hintText:hint ,
+          fillColor: Colors.white,
+          focusColor: Colors.white,
+          filled: true,
+
+
+
           enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
               borderSide: BorderSide(
-                  color: Theme.of(context).primaryColor,
+                  color: Colors.white,
                   width: 4
               )
           ),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(15),
               borderSide: BorderSide(
-                  color: Theme.of(context).primaryColor,
+                  color:Colors.white,
+                  width: 4
+              )
+          ),
+          errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide: BorderSide(
+                  color: Colors.red,
+                  width: 4
+              )
+          ),
+          focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(15),
+              borderSide: BorderSide(
+                  color: Colors.red,
                   width: 4
               )
           ),
 
         ),
+        key: formKey,
         keyboardType: keyboardType,
-        obscureText: isPassword ,
+        obscureText: secureText ,
         controller: controller,
         validator: myValidator ,
 
+
+
+
       ),
     );
+
   }
+
 }

@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:e_commerce/featuers/authentication_screens/sign_in_screen.dart';
+import 'package:e_commerce/featuers/authentication_screens/sign_in/sign_in_screen.dart';
 
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3 ), (){
       Navigator.pushReplacement(context,
-          MaterialPageRoute(builder: (context)=> const SignInScreen()));
+          MaterialPageRoute(builder: (context)=> SignInScreen()));
     });
     return Scaffold(
 

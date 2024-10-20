@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+typedef Validator = String? Function(String?);
 
 class AppValidators {
   AppValidators._();
@@ -19,7 +20,7 @@ class AppValidators {
 
   static String? validatePassword(String? val) {
     RegExp passwordRegex =
-        RegExp(r'^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[!@#\$&*~]).{8,}$');
+        RegExp(r'^(?=.*?[0-9]).{8,}$');
     if (val == null) {
       return "this field is required";
     } else if (val.trim().isEmpty) {
