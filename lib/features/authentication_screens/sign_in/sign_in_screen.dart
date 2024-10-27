@@ -4,11 +4,13 @@ import 'package:e_commerce/core/resources/constants_manager.dart';
 import 'package:e_commerce/core/resources/font_manager.dart';
 import 'package:e_commerce/core/widget/main_text_field.dart';
 import 'package:e_commerce/core/widget/validators.dart';
-import 'package:e_commerce/featuers/authentication_screens/sign_up/sign_up_screen.dart';
+
 import 'package:e_commerce/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../sign_up/sign_up_screen.dart';
 
 typedef Validator = String? Function(String?);
 

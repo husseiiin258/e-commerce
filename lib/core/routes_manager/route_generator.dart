@@ -1,6 +1,6 @@
 import 'package:e_commerce/core/routes_manager/routes.dart';
-import 'package:e_commerce/featuers/authentication_screens/sign_in/sign_in_screen.dart';
-import 'package:e_commerce/featuers/splash/splash_screen.dart';
+import 'package:e_commerce/features/authentication_screens/sign_in/sign_in_screen.dart';
+import 'package:e_commerce/features/splash/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator{

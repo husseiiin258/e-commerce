@@ -8,6 +8,7 @@ class ConstantsManager{
   static const String loginWelcomeWord = "welcome back to our app" ;
   static const String signInWord = "please sign in with your mail" ;
   static const String password = "password" ;
+  static const String rePassword = "re password" ;
   static const String emailAddress = "email address" ;
   static const String labelEmailAddress = "enter your email " ;
   static const String labelPassword = "enter your password" ;
